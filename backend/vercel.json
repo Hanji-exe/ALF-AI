@@ -8,7 +8,15 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/chat",
+      "dest": "main.py"
+    },
+    {
+      "src": "/feedback",
+      "dest": "main.py"
+    },
+    {
+      "src": "/feedbacks",
       "dest": "main.py"
     }
   ]
