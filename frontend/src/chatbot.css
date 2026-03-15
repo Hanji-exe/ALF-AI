@@ -437,129 +437,203 @@ textarea.form-input { resize: vertical; min-height: 105px; line-height: 1.65; }
   }
 }
 
-/* ── Mobile  ── */
+/* ── Mobile ── */
 @media (max-width: 450px) {
 
-  /* Sidebar to header */
+  /* App becomes vertical stack */
+  .app {
+    flex-direction: column;
+  }
+
+  /* Sidebar becomes top header bar */
   .sidebar {
     width: 100%;
-    height: 80px;
+    height: 60px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 0 16px;
     border-right: none;
     border-bottom: 1px solid rgba(167,139,250,0.08);
     position: sticky;
     top: 0;
     z-index: 30;
+    gap: 0;
   }
 
   .logo-wrap {
-    margin-bottom: 0;
-    margin-left: 10px;
-    margin-right: auto;
-    width: 50px;
+    margin: 0 auto 0 0;
+    width: 90px;
+    height: 90px;
   }
 
   .nav-btn {
-    width: 50px;
-    height: 50px;
-    gap: 3px;
-
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+    gap: 0;
   }
 
-
+  /* Active indicator becomes bottom underline */
   .nav-btn.active::before {
     top: auto;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 25px;
+    width: 24px;
     height: 3px;
     border-radius: 3px 3px 0 0;
   }
 
-
+  /* Hide nav labels on mobile */
   .nav-label {
-    font-size: 0;
-    align-items: center;
+    display: none;
   }
 
-  /* App becomes vertical */
-  .app {
-    flex-direction: column;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
+  /* Main fills remaining height */
   .main {
     flex: 1;
     overflow: hidden;
+    min-height: 0;
   }
 
-  /* Hero brought down slightly */
+  /* Chat tab */
+  .chat-tab {
+    padding: 0 14px;
+    max-width: 100%;
+  }
+
+  
+  /* Hero */
   .chat-hero {
-    padding: 20x 0 5px;
-    margin-bottom: 0;
-  }
-
+    max-height: 300px;
+    transition: opacity 0.5s ease, max-height 0.6s ease, padding 0.5s ease, margin 0.5s ease, flex 0.3s ease;
+    }
+ 
   .chat-hero-logo {
     width: 70px;
     height: 70px;
-    margin: 1rem auto 55px;
+    margin: 0.5rem auto 50px;
   }
 
+ .chat-hero-hidden {
+    opacity: 0;
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    pointer-events: none;
+    flex: 0;
+    }
   .chat-hero h1 {
-    font-size: 18px;
-    padding: 4px
+    font-size: 14px;
+    padding: 10px 0;
   }
-
+ 
   .chat-hero p {
-    font-size: 13px;
+    font-size: 11px;
   }
-
+ 
+  /* Messages */
+  .messages {
+    padding: 0px 0 100px;
+  }
+ 
   /* Bubbles */
   .bubble {
-    max-width: 95%;
-    font-size: 12px;
-    padding: 9px 12px;
-    margin-bottom: 20px;
+   max-width: 95%;
+  font-size: 13px;
+  padding: 9px 12px;
+    text-align: left;
   }
 
-  /* Smaller chips */
+  .bubble.bot-bubble {
+  min-width: 95%;
+}
+
+.bubble.user-bubble {
+  width: 80%;
+}
+ 
+  /* Avatars */
+  .av {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+ 
+  /* Chips */
   .chip {
     font-size: 11px;
-    padding: 15px 15px;
+    padding: 6px 12px;
   }
-
-  /* Input brought down */
+ 
+  /* Input */
+  .input-row {
+    padding: 16px 0 24px;
+    gap: 8px;
+    min-height: 10px;
+  }
+ 
   .chat-input {
     font-size: 14px;
-    padding: 14px 20px;
-    min-height: 4rem;
-    height: 1rem;
+    padding: 14px 16px;
+    min-height: 52px;
+    border-radius: 14px;
   }
-
+ 
   .send-btn {
-    padding: 14px 20px;
+    padding: 14px 18px;
     font-size: 14px;
-    height: 4rem;
+    height: 52px;
+    border-radius: 14px;
   }
-
-  .input-row {
-    padding: 8px 0 30px;
-    gap: 10px;
-  }
-
-  /* Feedback */
+ 
+  /* Feedback tab */
   .feedback-tab {
-    padding: 16px 14px 30px;
+    padding: 16px 16px 30px;
+    max-width: 100%;
   }
-
+ 
+  .fb-header {
+    margin-bottom: 20px;
+  }
+ 
   .fb-header h2 {
-    text-align: center;
     font-size: 22px;
     margin-top: 1rem;
-    padding-bottom: 50px;
+    text-align: center;
   }
+ 
+  .fb-header p {
+    font-size: 13px;
+    text-align: center;
+  }
+ 
+  .form-label {
+    font-size: 12px;
+  }
+ 
+  .form-input {
+    font-size: 14px;
+    padding: 10px 13px;
+  }
+ 
+  .submit-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+ 
+  .status-box {
+    font-size: 13px;
+  }
+ 
+  /* Typing indicator */
+  .typing-bubble {
+    padding: 10px 14px;
+  }
+ 
+  /* Orbs smaller on mobile */
+  .orb-1 { width: 300px; height: 300px; }
+  .orb-2 { width: 200px; height: 200px; }
+  .orb-3 { display: none; }
 }
