@@ -329,13 +329,13 @@ export default function Chatbot() {
 
             <div className="form-group">
               <label className="form-label">Your Name *</label>
-              <input className="form-input" type="text" placeholder="e.g. Juan dela Cruz"
+              <input className="form-input" type="text" placeholder="e.g. Alf Curada"
                 value={feedback.name} onChange={e => setFeedback({ ...feedback, name: e.target.value })} />
             </div>
 
             <div className="form-group">
               <label className="form-label">Email (optional)</label>
-              <input className="form-input" type="email" placeholder="e.g. juan@pup.edu.ph"
+              <input className="form-input" type="email" placeholder="e.g. alf.curada@gmail.com"
                 value={feedback.email} onChange={e => setFeedback({ ...feedback, email: e.target.value })} />
             </div>
 
@@ -354,7 +354,7 @@ export default function Chatbot() {
             </div>
 
             <button className="submit-btn" onClick={submitFeedback} disabled={feedbackLoading}>
-              {feedbackLoading ? "Sending..." : "Submit Feedback 💜"}
+              {feedbackLoading ? "Sending..." : "Submit Feedback "}
             </button>
 
             {feedbackStatus === "success" && <div className="status-box status-success"> Salamat! Your feedback has been sent successfully!</div>}
@@ -362,10 +362,13 @@ export default function Chatbot() {
             {feedbackStatus === "failed"  && <div className="status-box status-failed"> Something went wrong. Please try again later.</div>}
 
             <div className="divider" />
-            <p style={{ fontSize: 14, color: "#3b3561", textAlign: "center" }}>Your feedback helps AWSCC PUP grow! 🚀</p>
+            <p style={{ fontSize: 14, color: "#3b3561", textAlign: "center" }}>Your feedback helps AWSCC PUP grow!</p>
           </div>
         )}
       </div>
     </div>
   )
+
+  
 }
+
