@@ -438,47 +438,128 @@ textarea.form-input { resize: vertical; min-height: 105px; line-height: 1.65; }
 }
 
 /* ── Mobile  ── */
-@media (max-width: 480px) {
+@media (max-width: 450px) {
+
+  /* Sidebar to header */
   .sidebar {
+    width: 100%;
+    height: 80px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-right: none;
+    border-bottom: 1px solid rgba(167,139,250,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 30;
+  }
+
+  .logo-wrap {
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: auto;
     width: 50px;
   }
 
-  .nav-label {
-    font-size: 9px;
+  .nav-btn {
+    width: 50px;
+    height: 50px;
+    gap: 3px;
+
   }
 
-  .chat-hero h1 {
-    font-size: 18px;
+
+  .nav-btn.active::before {
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 3px;
+    border-radius: 3px 3px 0 0;
+  }
+
+
+  .nav-label {
+    font-size: 0;
+    align-items: center;
+  }
+
+  /* App becomes vertical */
+  .app {
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .main {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  /* Hero brought down slightly */
+  .chat-hero {
+    padding: 20x 0 5px;
+    margin-bottom: 0;
   }
 
   .chat-hero-logo {
     width: 70px;
     height: 70px;
-    margin: 1rem auto 10px;
+    margin: 1rem auto 55px;
   }
 
+  .chat-hero h1 {
+    font-size: 18px;
+    padding: 4px
+  }
+
+  .chat-hero p {
+    font-size: 13px;
+  }
+
+  /* Bubbles */
   .bubble {
-    max-width: 90%;
-    font-size: 13px;
+    max-width: 95%;
+    font-size: 12px;
     padding: 9px 12px;
+    margin-bottom: 20px;
   }
 
+  /* Smaller chips */
+  .chip {
+    font-size: 11px;
+    padding: 15px 15px;
+  }
+
+  /* Input brought down */
   .chat-input {
-    font-size: 13px;
-    padding: 14px 14px;
+    font-size: 14px;
+    padding: 14px 20px;
+    min-height: 4rem;
+    height: 1rem;
   }
 
   .send-btn {
-    padding: 14px 16px;
-    font-size: 13px;
+    padding: 14px 20px;
+    font-size: 14px;
+    height: 4rem;
   }
 
+  .input-row {
+    padding: 8px 0 30px;
+    gap: 10px;
+  }
+
+  /* Feedback */
   .feedback-tab {
     padding: 16px 14px 30px;
   }
 
   .fb-header h2 {
-    font-size: 18px;
-    margin-top: 2rem;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 1rem;
+    padding-bottom: 50px;
   }
 }
