@@ -19,7 +19,7 @@ const HERO_TEXTS = [
   "Pangutan-a si Alf 💜",
 ]
 
-const API_BASE = "https://alf-ai.vercel.app"
+const API_BASE = "https://alf-ai-backend.onrender.com"
 
 function formatMessage(text) {
   const urlRegex = /(https?:\/\/[^\s]+)/g
