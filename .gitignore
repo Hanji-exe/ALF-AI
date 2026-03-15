@@ -1,0 +1,17 @@
+# Python
+.env
+__pycache__
+*.pyc
+feedbacks.json
+
+# Node
+node_modules
+dist
+dist-ssr
+
+# OS
+.DS_Store
+
+# Editor
+.vscode/*
+.idea
