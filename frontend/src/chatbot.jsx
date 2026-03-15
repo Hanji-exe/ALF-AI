@@ -19,7 +19,7 @@ const HERO_TEXTS = [
   "Pangutan-a si Alf 💜",
 ]
 
-const API_BASE = "http://localhost:8000"
+const API_BASE = "alf-ai-cn2h-ilmgsr34e-han-jis-projects.vercel.app"
 
 function formatMessage(text) {
   const urlRegex = /(https?:\/\/[^\s]+)/g
