@@ -399,3 +399,86 @@ textarea.form-input { resize: vertical; min-height: 105px; line-height: 1.65; }
 .star.star-active { color: #98e63f; transform: scale(1.25); }
 
 .divider { height: 1px; background: rgba(167,139,250,0.08); margin: 22px 0; }
+
+
+/* ── Tablet  ── */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 56px;
+  }
+
+  .chat-tab {
+    padding: 0 16px;
+  }
+
+  .chat-hero h1 {
+    font-size: 24px;
+  }
+
+  .chat-hero p {
+    font-size: 14px;
+  }
+
+  .bubble {
+    max-width: 85%;
+    font-size: 14px;
+  }
+
+  .chat-input {
+    font-size: 14px;
+  }
+
+  .feedback-tab {
+    padding: 24px 20px 40px;
+  }
+
+  .fb-header h2 {
+    font-size: 22px;
+  }
+}
+
+/* ── Mobile  ── */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 50px;
+  }
+
+  .nav-label {
+    font-size: 9px;
+  }
+
+  .chat-hero h1 {
+    font-size: 18px;
+  }
+
+  .chat-hero-logo {
+    width: 70px;
+    height: 70px;
+    margin: 1rem auto 10px;
+  }
+
+  .bubble {
+    max-width: 90%;
+    font-size: 13px;
+    padding: 9px 12px;
+  }
+
+  .chat-input {
+    font-size: 13px;
+    padding: 14px 14px;
+  }
+
+  .send-btn {
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+
+  .feedback-tab {
+    padding: 16px 14px 30px;
+  }
+
+  .fb-header h2 {
+    font-size: 18px;
+    margin-top: 2rem;
+  }
+}
