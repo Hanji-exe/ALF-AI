@@ -18,7 +18,7 @@ client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://your-frontend.vercel.app"],
+    allow_origins=["https://alf-ai-8atr.vercel.app"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
